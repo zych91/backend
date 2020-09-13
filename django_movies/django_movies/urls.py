@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from core.models import Genre, Movie
-from core.views import hello, MovieView
+from core.views import hello
 
 from core.views import MovieCreateView
 
@@ -24,12 +24,11 @@ from core.views import MovieUpdateView
 
 from core.views import MovieDeleteView
 
+from core.views import IndexView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello),
-    path('', MovieView.as_view(), name='index'),
-    path('movie/create', MovieCreateView.as_view(), name='movie_create'),
-    path('movie/update/<pk>', MovieUpdateView.as_view(), name='movie_update'),
-    path('movie/delete/<pk>', MovieDeleteView.as_view(), name='movie_delete'),
-    # path('', movies, name="index")
+    path("core/", include("core.urls", namespace='core')),
+    path('', IndexView.as_view(), name="index"),
 ]
