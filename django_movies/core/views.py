@@ -95,7 +95,7 @@ class MovieDeleteView(DeleteView):
 
 
 class MovieListView(ListView):
-    template_name = "movie_detail.html"
+    template_name = "movie_list.html"
     model = Movie
 
 class MovieDetailView(DetailView):
