@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
 from django import views
 from django.http import HttpResponse
@@ -58,7 +59,7 @@ def hello(request):
 #         return context
 
 
-class MovieCreateView(CreateView):
+class MovieCreateView(LoginRequiredMixin, CreateView):
     title = 'Add Movie'
     template_name = 'form.html'
     form_class = MovieForm
@@ -76,8 +77,11 @@ class MovieCreateView(CreateView):
 
         return result
 
+class StaffRequiredMixin(UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.is_staff
 
-class MovieUpdateView(UpdateView):
+class MovieUpdateView(LoginRequiredMixin, StaffRequiredMixin, UpdateView):
     template_name = 'form.html'
     model = Movie
     form_class = MovieForm
@@ -88,7 +92,11 @@ class MovieUpdateView(UpdateView):
         return super().form_invalid(form)
 
 
-class MovieDeleteView(DeleteView):
+class MovieDeleteView(LoginRequiredMixin, StaffRequiredMixin, DeleteView):
+    def test_func(self):
+        super().test_func()
+        return self.request.user.is_superuser
+
     model = Movie
     template_name = 'movie_confirm_delete.html'
     success_url = reverse_lazy('core:movie_list')
@@ -101,6 +109,3 @@ class MovieListView(ListView):
 class MovieDetailView(DetailView):
     template_name = 'movie_detail.html'
     model = Movie
-
-class IndexView(MovieListView):
-    template_name = "index.html"

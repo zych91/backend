@@ -24,11 +24,12 @@ from core.views import MovieUpdateView
 
 from core.views import MovieDeleteView
 
-from core.views import IndexView
+from .views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello),
     path("core/", include("core.urls", namespace='core')),
     path('', IndexView.as_view(), name="index"),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
 ]
