@@ -1,0 +1,215 @@
+[
+  {
+    "model": "core.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Science-fiction",
+      "age_limit": "PG-13"
+    }
+  },
+  {
+    "model": "core.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Comedyhaha",
+      "age_limit": "NC-17"
+    }
+  },
+  {
+    "model": "core.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Action",
+      "age_limit": "R"
+    }
+  },
+  {
+    "model": "core.genre",
+    "pk": 4,
+    "fields": {
+      "name": "Documentary",
+      "age_limit": "PG"
+    }
+  },
+  {
+    "model": "core.genre",
+    "pk": 5,
+    "fields": {
+      "name": "Historic",
+      "age_limit": "PG"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 1,
+    "fields": {
+      "first_name": "Joss",
+      "last_name": "Whedon"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 2,
+    "fields": {
+      "first_name": "George",
+      "last_name": "Lucas"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 3,
+    "fields": {
+      "first_name": "John",
+      "last_name": "McTiernan"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 4,
+    "fields": {
+      "first_name": "Christopher",
+      "last_name": "McQuarrie"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 5,
+    "fields": {
+      "first_name": "Flip",
+      "last_name": "vad der Kuil"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 6,
+    "fields": {
+      "first_name": "Quentin",
+      "last_name": "Tarantino"
+    }
+  },
+  {
+    "model": "core.director",
+    "pk": 7,
+    "fields": {
+      "first_name": "Brian",
+      "last_name": "Fogel"
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 1,
+    "fields": {
+      "title": "Django",
+      "rating": 6,
+      "released": "2013-01-18",
+      "description": "",
+      "created": "2020-09-05T12:33:28.441Z",
+      "genre": 3,
+      "director": 6
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 2,
+    "fields": {
+      "title": "Marvel's Avengers",
+      "rating": 7,
+      "released": "2012-05-11",
+      "description": "",
+      "created": "2020-09-05T12:52:59.934Z",
+      "genre": 1,
+      "director": 1
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 3,
+    "fields": {
+      "title": "Star Wars: Episode IV - A New Hope",
+      "rating": 10,
+      "released": "1979-07-19",
+      "description": "",
+      "created": "2020-09-05T12:54:07.952Z",
+      "genre": 1,
+      "director": 2
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 4,
+    "fields": {
+      "title": "New Kids Turbo",
+      "rating": 8,
+      "released": "2010-12-07",
+      "description": "",
+      "created": "2020-09-05T12:56:36.661Z",
+      "genre": 2,
+      "director": 5
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 5,
+    "fields": {
+      "title": "New Kids Nitro",
+      "rating": 9,
+      "released": "2011-12-06",
+      "description": "",
+      "created": "2020-09-05T12:56:36.661Z",
+      "genre": 2,
+      "director": 5
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 7,
+    "fields": {
+      "title": "Star Wars: Episode V - The Empire Strikes Back",
+      "rating": 10,
+      "released": "1980-05-17",
+      "description": "",
+      "created": "2020-09-06T08:48:51.165Z",
+      "genre": 1,
+      "director": 2
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 8,
+    "fields": {
+      "title": "Mission: Impossible",
+      "rating": 7,
+      "released": "1996-05-22",
+      "description": "",
+      "created": "2020-09-06T09:28:18.276Z",
+      "genre": 3,
+      "director": 4
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 9,
+    "fields": {
+      "title": "Die Hard",
+      "rating": 8,
+      "released": "1988-07-15",
+      "description": "",
+      "created": "2020-09-06T09:28:53.348Z",
+      "genre": 3,
+      "director": 3
+    }
+  },
+  {
+    "model": "core.movie",
+    "pk": 10,
+    "fields": {
+      "title": "Icarus",
+      "rating": 4,
+      "released": "2017-01-20",
+      "description": "",
+      "created": "2020-09-06T09:30:08.595Z",
+      "genre": 4,
+      "director": 7
+    }
+  }
+]
